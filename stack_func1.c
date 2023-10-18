@@ -54,7 +54,7 @@ void pop_(stack_t **stack, unsigned int lineNumber)
 	stack_t *tmp;
 
 	if (stack == NULL || *stack == NULL)
-		more_err(7, lineNumber);
+		more_(7, lineNumber);
 
 	tmp = *stack;
 	*stack = tmp->next;
@@ -71,6 +71,6 @@ void pop_(stack_t **stack, unsigned int lineNumber)
 void printF_top(stack_t **stack, unsigned int lineNumber)
 {
 	if (stack == NULL || *stack == NULL)
-		more_err(6, lineNumber);
+		more_(6, lineNumber);
 	printf("%d\n", (*stack)->n);
 }
